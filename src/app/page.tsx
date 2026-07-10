@@ -1,66 +1,80 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Nav from "@/components/Nav";
+import Hero from "@/components/Hero";
+import Marquee from "@/components/Marquee";
+import ScrollFX from "@/components/ScrollFX";
+import ProjectPanel from "@/components/ProjectPanel";
+import About from "@/components/About";
+import ContactFooter from "@/components/ContactFooter";
+import { getProjectImageSrc } from "@/lib/projectImages";
+
+// TODO: point this at wherever this portfolio's own repo ends up living.
+const THIS_SITE_REPO = "https://github.com/Adamf124/Nextjs-Protfolio";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+    <>
+      <ScrollFX />
+      <Nav />
+      <Hero />
+      <Marquee />
+
+      <div id="work" className="af-work">
+        <ProjectPanel
+          index="01"
+          eyebrow="E-commerce · Next.js / Stripe · 2025"
+          title={
+            <>
+              Commerce, stripped to&nbsp;<em>essentials.</em>
+            </>
+          }
+          body="Cheap Fabric Pots — a direct-to-grower storefront designed, built, and shipped solo. Next.js App Router, Stripe checkout, and a catalog tuned for one job: getting growers to the right pot fast."
+          linkHref="https://github.com/Adamf124/cheapfabricpots"
+          linkLabel="View Source"
+          background="#0E1114"
+          imageSrc={getProjectImageSrc("fabric-pots")}
+          imageAlt="Cheap Fabric Pots screenshot"
+          imageFilenameHint="public/images/projects/fabric-pots.jpg"
+        />
+
+        <ProjectPanel
+          index="02"
+          eyebrow="Marketing Site · AI Handoff · 2026"
+          title={
+            <>
+              From AI mockup to <em>production.</em>
+            </>
+          }
+          body="A home-services site designed in Claude, exported as a handoff bundle, then implemented pixel-for-pixel in Next.js. A working study in AI-native process: design fast, refine by hand, ship real code."
+          linkHref="https://github.com/Adamf124/home-services-site"
+          linkLabel="View Source"
+          background="#101312"
+          imageOnLeft
+          imageSrc={getProjectImageSrc("home-services")}
+          imageAlt="Home Services site screenshot"
+          imageFilenameHint="public/images/projects/home-services.jpg"
           priority
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <ProjectPanel
+          index="03"
+          eyebrow="Interactive · GSAP / Canvas · 2026"
+          title={
+            <>
+              The portfolio <em>is</em> the case&nbsp;study.
+            </>
+          }
+          body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system — designed with AI, tuned by hand, open source."
+          linkHref={THIS_SITE_REPO}
+          linkLabel="View Source"
+          background="#12100E"
+          imageSrc={getProjectImageSrc("portfolio")}
+          imageAlt="Screenshot of this portfolio site"
+          imageFilenameHint="public/images/projects/portfolio.jpg"
+        />
+      </div>
+
+      <About />
+      <ContactFooter />
+    </>
   );
 }
