@@ -7,8 +7,7 @@ import About from "@/components/About";
 import ContactFooter from "@/components/ContactFooter";
 import { getProjectImageSrc } from "@/lib/projectImages";
 
-// TODO: point this at wherever this portfolio's own repo ends up living.
-const THIS_SITE_REPO = "https://github.com/Adamf124/Nextjs-Protfolio";
+const THIS_SITE_REPO = "https://github.com/Adamf124/adam-portfolio";
 
 export default function Home() {
   return (
