@@ -32,6 +32,7 @@ export default function Home() {
           imageSrc={getProjectImageSrc("fabric-pots")}
           imageAlt="Cheap Fabric Pots screenshot"
           imageFilenameHint="public/images/projects/fabric-pots.jpg"
+          imageFit="contain"
         />
 
         <ProjectPanel

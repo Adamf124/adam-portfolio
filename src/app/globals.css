@@ -320,6 +320,14 @@ a:hover {
   position: absolute;
   inset: -4% 0;
 }
+/* Screenshots too wide for the frame are shown whole (letterboxed) instead of
+   cropped. No parallax overscan so the letterbox bars stay even. */
+.af-panel-media.contain {
+  background: #0d0f11;
+}
+.af-panel-media.contain .af-panel-parallax {
+  inset: 0;
+}
 
 /* ===== Project image / placeholder ===== */
 .af-project-image {
@@ -329,6 +337,9 @@ a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+.af-panel-media.contain .af-project-image {
+  object-fit: contain;
 }
 .af-project-placeholder {
   position: absolute;

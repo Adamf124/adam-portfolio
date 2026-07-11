@@ -14,6 +14,7 @@ type ProjectPanelProps = {
   imageSrc: string | null;
   imageAlt: string;
   imageFilenameHint: string;
+  imageFit?: "cover" | "contain";
   priority?: boolean;
 };
 
@@ -30,10 +31,14 @@ export default function ProjectPanel({
   imageSrc,
   imageAlt,
   imageFilenameHint,
+  imageFit = "cover",
   priority,
 }: ProjectPanelProps) {
   const media = (
-    <div className="af-panel-media" data-reveal>
+    <div
+      className={`af-panel-media${imageFit === "contain" ? " contain" : ""}`}
+      data-reveal
+    >
       <div className="af-panel-parallax" data-parallax>
         <ProjectImage
           src={imageSrc}
