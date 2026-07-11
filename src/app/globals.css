@@ -227,43 +227,6 @@ a:hover {
   }
 }
 
-/* ===== Marquee ===== */
-.af-marquee {
-  position: relative;
-  z-index: 3;
-  background: var(--af-bg);
-  border-top: 1px solid rgba(232, 228, 219, 0.1);
-  border-bottom: 1px solid rgba(232, 228, 219, 0.1);
-  overflow: hidden;
-  padding: 18px 0;
-}
-.af-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: af-marquee 36s linear infinite;
-  white-space: nowrap;
-}
-@keyframes af-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .af-marquee-track {
-    animation: none;
-  }
-}
-.af-marquee-text {
-  font-family: var(--font-serif), serif;
-  font-style: italic;
-  font-size: clamp(20px, 2.6vw, 30px);
-  color: rgba(232, 228, 219, 0.45);
-  padding-right: 2ch;
-}
-
 /* ===== Work / panels ===== */
 .af-work {
   position: relative;

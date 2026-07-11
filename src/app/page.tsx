@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
 import ScrollFX from "@/components/ScrollFX";
 import ProjectPanel from "@/components/ProjectPanel";
 import About from "@/components/About";
@@ -15,7 +14,6 @@ export default function Home() {
       <ScrollFX />
       <Nav />
       <Hero />
-      <Marquee />
 
       <div id="work" className="af-work">
         <ProjectPanel
