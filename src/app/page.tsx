@@ -53,6 +53,7 @@ export default function Home() {
           imageAlt="Home Services site screenshot"
           imageFilenameHint="public/images/projects/home-services.jpg"
           imageFit="contain"
+          mediaAspect="5 / 4"
           priority
         />
 

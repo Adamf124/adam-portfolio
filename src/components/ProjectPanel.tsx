@@ -15,6 +15,8 @@ type ProjectPanelProps = {
   imageAlt: string;
   imageFilenameHint: string;
   imageFit?: "cover" | "contain";
+  /** Override the media frame's aspect ratio (CSS value, e.g. "5 / 4"). */
+  mediaAspect?: string;
   priority?: boolean;
 };
 
@@ -32,11 +34,13 @@ export default function ProjectPanel({
   imageAlt,
   imageFilenameHint,
   imageFit = "cover",
+  mediaAspect,
   priority,
 }: ProjectPanelProps) {
   const media = (
     <div
       className={`af-panel-media${imageFit === "contain" ? " contain" : ""}`}
+      style={mediaAspect ? { aspectRatio: mediaAspect } : undefined}
       data-reveal
     >
       <div className="af-panel-parallax" data-parallax>
