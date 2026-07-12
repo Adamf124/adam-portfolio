@@ -52,6 +52,7 @@ export default function Home() {
           imageSrc={getProjectImageSrc("home-services")}
           imageAlt="Home Services site screenshot"
           imageFilenameHint="public/images/projects/home-services.jpg"
+          imageFit="contain"
           priority
         />
 
