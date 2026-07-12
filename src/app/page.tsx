@@ -24,7 +24,7 @@ export default function Home() {
               Commerce, stripped to&nbsp;<em>essentials.</em>
             </>
           }
-          body="Cheap Fabric Pots — a direct-to-grower storefront designed, built, and shipped solo. Next.js App Router, Stripe checkout, and a catalog tuned for one job: getting growers to the right pot fast."
+          body="Cheap Fabric Pots, a direct-to-grower storefront designed, built, and shipped solo. Next.js App Router, Stripe checkout, and a catalog tuned for one job: getting growers to the right pot fast."
           reasoning="Payments came down to documentation. Every processor had a checkout API; Stripe was the one whose docs could be followed end to end without a support thread, whose hookups worked on the first pass, and whose invoicing came in the same package instead of as a second integration. Integration cost is mostly reading cost — the clearest manual won."
           linkHref="https://github.com/Adamf124/cheapfabricpots"
           linkLabel="View Source"
@@ -65,7 +65,7 @@ export default function Home() {
               The portfolio <em>is</em> the case&nbsp;study.
             </>
           }
-          body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system — designed with AI, tuned by hand, open source."
+          body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system. Designed with AI, tuned by hand, open source."
           reasoning="The open question during the build: these pinned, scroll-scrubbed panels are the identity of the page and also its biggest mobile-performance risk. The options were to strip the effect on phones or keep it and pay the cost down elsewhere. It stayed — and the budget came out of the particle field instead: fewer particles at a lower pixel-ratio cap, a shorter parallax range, and the canvas loop paused whenever the tab is hidden."
           linkHref={THIS_SITE_REPO}
           linkLabel="View Source"

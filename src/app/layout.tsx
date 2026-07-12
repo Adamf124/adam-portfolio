@@ -24,10 +24,50 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://adamferguson.pro";
+const TITLE = "Adam Ferguson, Full-Stack Developer";
+const DESCRIPTION =
+  "Adam Ferguson, Atlanta-based full-stack developer. I design and build fast, considered software. I pair full-stack craft with an AI-native process.";
+
 export const metadata: Metadata = {
-  title: "Adam Ferguson — Full-Stack Developer",
-  description:
-    "Adam Ferguson, Atlanta-based full-stack developer. I design and build fast, considered software — pairing full-stack craft with an AI-native process.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Adam Ferguson",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Adam Ferguson",
+  jobTitle: "Full-Stack Developer",
+  url: SITE_URL,
+  email: "mailto:adam@adamferguson.pro",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Atlanta",
+    addressRegion: "GA",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://github.com/Adamf124",
+    "https://www.linkedin.com/in/adamferguson124/",
+  ],
 };
 
 export default function RootLayout({
@@ -40,7 +80,13 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSerif.variable} ${archivo.variable} ${spaceMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

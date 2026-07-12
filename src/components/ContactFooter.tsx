@@ -15,7 +15,7 @@ export default function ContactFooter() {
       </div>
       <footer className="af-footer">
         <div className="af-footer-inner">
-          <span>© 2026 Adam Ferguson — Atlanta, GA</span>
+          <span>© 2026 Adam Ferguson · Atlanta, GA</span>
           <span className="af-footer-links">
             <a href="https://github.com/Adamf124" target="_blank" rel="noopener noreferrer">
               GitHub

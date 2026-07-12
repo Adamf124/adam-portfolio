@@ -153,7 +153,7 @@ export default function Hero() {
       <div className="af-hero-vignette" />
       <div data-hero-content className="af-hero-content">
         <div data-hero-fade className="af-hero-eyebrow">
-          Atlanta, GA — Full-Stack Developer
+          Atlanta, GA · Full-Stack Developer
         </div>
         <h1 className="af-hero-title">
           <span className="af-hero-line-mask">
@@ -168,7 +168,7 @@ export default function Hero() {
           </span>
         </h1>
         <p data-hero-fade className="af-hero-sub">
-          I design and build fast, considered software — pairing full-stack
+          I design and build fast, considered software. I pair full-stack
           craft with an AI-native process.
         </p>
         <div data-hero-fade className="af-hero-ctas">

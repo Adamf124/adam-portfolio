@@ -8,7 +8,7 @@ const MOBILE_QUERY = "(max-width: 768px)";
 
 /**
  * Wires up all scroll-driven GSAP animation for the page in one place, via
- * data-attribute queries — mirrors the original design's approach so any
+ * data-attribute queries. Mirrors the original design's approach so any
  * section can opt in just by adding a data attribute, no per-component GSAP
  * wiring needed.
  */
