@@ -62,7 +62,7 @@ export default function Home() {
           eyebrow="Interactive · GSAP / Canvas · 2026"
           title={
             <>
-              The portfolio <em>is</em> the case&nbsp;study.
+              The portfolio <em>is </em> the case&nbsp;study.
             </>
           }
           body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system. Designed with AI, tuned by hand, open source."
