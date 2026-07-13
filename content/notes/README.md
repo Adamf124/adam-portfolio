@@ -10,7 +10,7 @@ Frontmatter:
 title: "The problem or decision, stated plainly"
 date: "2026-07-15"          # used for sorting, newest first
 summary: "One or two sentences shown on the /notes index."
-draft: true                  # optional — hides the entry from the site
+draft: true                  # optional, hides the entry from the site
 ---
 ```
 
@@ -22,4 +22,4 @@ Body is plain markdown. Structure that works (from the site strategy doc):
 4. What worked. If a non-technical person was involved, how it got
    explained to them.
 
-Fill in real specifics — don't generalize them away.
+Fill in real specifics. Don't generalize them away.

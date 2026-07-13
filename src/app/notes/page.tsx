@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 import { getAllNotes } from "@/lib/notes";
 
 export const metadata: Metadata = {
-  title: "Notes — Adam Ferguson",
+  title: "Notes | Adam Ferguson",
   description:
     "Short write-ups on real problems: a bug, a decision, a moment where something technical had to get explained to someone who doesn't code.",
 };

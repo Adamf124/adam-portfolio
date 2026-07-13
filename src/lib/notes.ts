@@ -18,7 +18,7 @@ export type Note = NoteMeta & {
 
 /**
  * Notes live as markdown files in content/notes/. Adding an entry is dropping
- * in one .md file with `title`, `date`, and `summary` frontmatter — no code
+ * in one .md file with `title`, `date`, and `summary` frontmatter, no code
  * changes. Set `draft: true` in frontmatter to keep an unfinished entry out
  * of the site entirely.
  */

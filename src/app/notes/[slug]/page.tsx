@@ -13,9 +13,9 @@ export async function generateMetadata({
 }: PageProps<"/notes/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const note = getNote(slug);
-  if (!note) return { title: "Note not found — Adam Ferguson" };
+  if (!note) return { title: "Note not found | Adam Ferguson" };
   return {
-    title: `${note.title} — Adam Ferguson`,
+    title: `${note.title} | Adam Ferguson`,
     description: note.summary,
   };
 }
