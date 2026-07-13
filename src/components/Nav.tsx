@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <nav className="af-nav">
-      <a href="#top" className="af-nav-logo">
+      <Link href="/" className="af-nav-logo">
         Adam Ferguson
-      </a>
+      </Link>
       <div className="af-nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <Link href="/#work">Work</Link>
+        <Link href="/notes">Notes</Link>
+        <Link href="/#about">About</Link>
+        <Link href="/#contact">Contact</Link>
       </div>
     </nav>
   );

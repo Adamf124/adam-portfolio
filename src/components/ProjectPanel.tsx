@@ -6,6 +6,7 @@ type ProjectPanelProps = {
   eyebrow: string;
   title: ReactNode;
   body: string;
+  reasoning?: string;
   linkHref: string;
   linkLabel: string;
   background: string;
@@ -21,6 +22,7 @@ export default function ProjectPanel({
   eyebrow,
   title,
   body,
+  reasoning,
   linkHref,
   linkLabel,
   background,
@@ -58,6 +60,12 @@ export default function ProjectPanel({
       <p className="af-panel-body" data-reveal>
         {body}
       </p>
+      {reasoning && (
+        <p className="af-panel-reasoning" data-reveal>
+          <span className="af-panel-reasoning-label">The tradeoff</span>
+          {reasoning}
+        </p>
+      )}
       <div className="af-panel-links" data-reveal>
         <a href={linkHref} target="_blank" rel="noopener noreferrer">
           {linkLabel} ↗

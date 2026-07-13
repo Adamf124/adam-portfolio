@@ -14,10 +14,31 @@ const MOBILE_QUERY = "(max-width: 768px)";
  */
 export default function ScrollFX() {
   useEffect(() => {
+    // A sticky panel taller than the viewport pins at top:0 with its lower
+    // content permanently clipped under the next panel. Offset the sticky
+    // top negatively so the full panel scrolls into view before pinning.
+    const panels = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-panel]")
+    );
+    const setPanelTops = () => {
+      const vh = window.innerHeight;
+      panels.forEach((p) => {
+        p.style.top = `${Math.min(0, vh - p.offsetHeight)}px`;
+      });
+    };
+    setPanelTops();
+    const ro = new ResizeObserver(setPanelTops);
+    panels.forEach((p) => ro.observe(p));
+    window.addEventListener("resize", setPanelTops);
+    const cleanupPanelTops = () => {
+      ro.disconnect();
+      window.removeEventListener("resize", setPanelTops);
+    };
+
     const reduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (reduced) return;
+    if (reduced) return cleanupPanelTops;
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -112,6 +133,7 @@ export default function ScrollFX() {
     });
 
     return () => {
+      cleanupPanelTops();
       mm.revert();
       ctx.revert();
     };

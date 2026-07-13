@@ -22,14 +22,22 @@ export default function About() {
             Craft, without the&nbsp;<em>noise.</em>
           </h2>
           <p className="af-about-body" data-reveal>
-            Atlanta-based developer and educator. I spent three years
-            mentoring full-stack cohorts at Georgia Tech&apos;s coding
-            bootcamp, and I&apos;ve shipped storefronts, marketing sites, and
-            internal tools end-to-end.
+            Atlanta-based developer. Three years teaching full-stack
+            development to bootcamp cohorts at Georgia Tech, work that trains
+            one specific skill: finding where someone&apos;s understanding
+            breaks, then explaining the same idea a different way until it
+            holds.
           </p>
           <p className="af-about-body" data-reveal>
-            Today I work AI-native — design in Claude, refine by hand, ship in
-            Next.js. The tools are new; the standard isn&apos;t.
+            I&apos;ve carried that into the work itself. Storefronts,
+            marketing sites, and internal tools, shipped end to end, for
+            clients who don&apos;t read code and don&apos;t need to. Today the
+            process is AI-native: design in Claude, refine by hand, ship in
+            Next.js. The tools changed. Making something clear and correct
+            didn&apos;t.
+          </p>
+          <p className="af-about-availability" data-reveal>
+            Open to full-time technical roles as well as select project work.
           </p>
           <div className="af-about-stack" data-reveal>
             React · Node · Next.js · Stripe · Shopify · Git

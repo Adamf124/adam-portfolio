@@ -14,9 +14,9 @@ test.describe("Portfolio landing page", () => {
 
     await expect(page.locator("h1")).toContainText("Adam");
     await expect(page.locator("h1")).toContainText("Ferguson");
-    await expect(page.locator("nav a[href='#work']")).toBeVisible();
-    await expect(page.locator("nav a[href='#about']")).toBeVisible();
-    await expect(page.locator("nav a[href='#contact']")).toBeVisible();
+    await expect(page.locator("nav a[href='/#work']")).toBeVisible();
+    await expect(page.locator("nav a[href='/#about']")).toBeVisible();
+    await expect(page.locator("nav a[href='/#contact']")).toBeVisible();
 
     await expect(page.locator("[data-panel]")).toHaveCount(3);
     await expect(page.locator("#about")).toBeVisible();
@@ -80,5 +80,67 @@ test.describe("Portfolio landing page", () => {
     await page.goto("/");
     const canvas = page.locator("canvas");
     await expect(canvas).toHaveAttribute("data-ready", "true");
+  });
+
+  test("About leads with the teaching credential and states full-time openness", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const about = page.locator("#about");
+    await expect(about).toContainText("Three years teaching full-stack");
+    await expect(about).toContainText(
+      "Open to full-time technical roles as well as select project work."
+    );
+  });
+
+  test("each case study shows a tradeoff reasoning paragraph", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    await expect(page.locator(".af-panel-reasoning")).toHaveCount(3);
+    await expect(
+      page.locator(".af-panel-reasoning").first()
+    ).toContainText("documentation");
+  });
+});
+
+test.describe("Notes section", () => {
+  test("nav links to Notes from the home page", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator("nav a[href='/notes']")).toBeVisible();
+  });
+
+  test("index lists the seed entries, newest first, without the README", async ({
+    page,
+  }) => {
+    await page.goto("/notes");
+    const items = page.locator(".af-notes-item");
+    await expect(items).toHaveCount(3);
+    await expect(items.first()).toContainText(
+      "Getting lead data into the CRM"
+    );
+    await expect(page.locator("body")).not.toContainText(
+      "Adding a Notes entry"
+    );
+  });
+
+  test("an entry page renders title, prose, and back link", async ({
+    page,
+  }) => {
+    await page.goto("/notes/placeholders-a-non-developer-can-replace");
+    await expect(page.locator("h1")).toContainText(
+      "Placeholders a non-developer can replace"
+    );
+    await expect(page.locator(".af-note-prose p").first()).toBeVisible();
+    await expect(
+      page.locator("a[href='/notes']", { hasText: "All notes" }).first()
+    ).toBeVisible();
+  });
+
+  test("unknown slugs and the README slug 404", async ({ page }) => {
+    const missing = await page.goto("/notes/does-not-exist");
+    expect(missing?.status()).toBe(404);
+    const readme = await page.goto("/notes/README");
+    expect(readme?.status()).toBe(404);
   });
 });

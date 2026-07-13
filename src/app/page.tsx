@@ -25,6 +25,7 @@ export default function Home() {
             </>
           }
           body="Cheap Fabric Pots — a direct-to-grower storefront designed, built, and shipped solo. Next.js App Router, Stripe checkout, and a catalog tuned for one job: getting growers to the right pot fast."
+          reasoning="Payments came down to documentation. Every processor had a checkout API; Stripe was the one whose docs could be followed end to end without a support thread, whose hookups worked on the first pass, and whose invoicing came in the same package instead of as a second integration. Integration cost is mostly reading cost — the clearest manual won."
           linkHref="https://github.com/Adamf124/cheapfabricpots"
           linkLabel="View Source"
           background="#0E1114"
@@ -42,6 +43,7 @@ export default function Home() {
             </>
           }
           body="A home-services site designed in Claude, exported as a handoff bundle, then implemented pixel-for-pixel in Next.js. A working study in AI-native process: design fast, refine by hand, ship real code."
+          reasoning="The hard call in an AI handoff is what to keep. A design prototype's code is built for iteration speed, not production — so the structure was thrown away and only the rendered result was treated as the spec. Pixel-for-pixel meant matching output, not porting markup, and every place the mockup had been vague — breakpoints, image sizing, states it never showed — had to become an explicit decision."
           linkHref="https://github.com/Adamf124/home-services-site"
           linkLabel="View Source"
           background="#101312"
@@ -61,6 +63,7 @@ export default function Home() {
             </>
           }
           body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system — designed with AI, tuned by hand, open source."
+          reasoning="The open question during the build: these pinned, scroll-scrubbed panels are the identity of the page and also its biggest mobile-performance risk. The options were to strip the effect on phones or keep it and pay the cost down elsewhere. It stayed — and the budget came out of the particle field instead: fewer particles at a lower pixel-ratio cap, a shorter parallax range, and the canvas loop paused whenever the tab is hidden."
           linkHref={THIS_SITE_REPO}
           linkLabel="View Source"
           background="#12100E"
