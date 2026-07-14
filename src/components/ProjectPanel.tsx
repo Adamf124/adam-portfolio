@@ -7,6 +7,7 @@ type ProjectPanelProps = {
   title: ReactNode;
   body: string;
   reasoning?: string;
+  reasoningLabel?: string;
   linkHref: string;
   linkLabel: string;
   background: string;
@@ -26,6 +27,7 @@ export default function ProjectPanel({
   title,
   body,
   reasoning,
+  reasoningLabel = "Key Decision",
   linkHref,
   linkLabel,
   background,
@@ -71,7 +73,7 @@ export default function ProjectPanel({
       </p>
       {reasoning && (
         <p className="af-panel-reasoning" data-reveal>
-          <span className="af-panel-reasoning-label">The tradeoff</span>
+          <span className="af-panel-reasoning-label">{reasoningLabel}</span>
           {reasoning}
         </p>
       )}
