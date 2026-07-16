@@ -13,7 +13,9 @@ export default function Home() {
     <>
       <ScrollFX />
       <Nav />
-      <Hero />
+      <div className="af-hero-wrap">
+        <Hero />
+      </div>
 
       <div id="work" className="af-work">
         <ProjectPanel

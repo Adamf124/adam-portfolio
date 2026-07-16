@@ -85,6 +85,14 @@ a:hover {
 }
 
 /* ===== Hero ===== */
+/* Bounds the hero's sticky pin to its own height, the same way .af-work
+   bounds the panels, so it releases and scrolls away instead of staying
+   pinned (and painting) behind the rest of the page forever. */
+.af-hero-wrap {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+}
 .af-hero {
   position: sticky;
   top: 0;
@@ -462,6 +470,9 @@ a:hover {
 }
 
 .af-contact {
+  position: relative;
+  z-index: 1;
+  background: var(--af-bg);
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 64px) clamp(90px, 14vh, 170px);
@@ -491,6 +502,9 @@ a:hover {
 }
 
 .af-footer {
+  position: relative;
+  z-index: 1;
+  background: var(--af-bg);
   border-top: 1px solid rgba(232, 228, 219, 0.1);
 }
 .af-footer-inner {
