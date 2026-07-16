@@ -168,8 +168,9 @@ export default function Hero() {
           </span>
         </h1>
         <p data-hero-fade className="af-hero-sub">
-          I design and build fast, considered software. I pair full-stack
-          craft with an AI-native process.
+          I build storefronts, marketing sites, and internal tools for people
+          who don&apos;t read code. Design in Claude, build in Next.js, ship
+          something correct.
         </p>
         <div data-hero-fade className="af-hero-ctas">
           <a href="#work" className="af-btn-outline">

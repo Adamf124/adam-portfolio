@@ -19,7 +19,7 @@ export default function About() {
             About
           </div>
           <h2 className="af-about-title" data-reveal>
-            Craft, without the&nbsp;<em>noise.</em>
+            What three years of teaching taught me about building.
           </h2>
           <p className="af-about-body" data-reveal>
             Atlanta-based developer. Three years teaching full-stack
@@ -32,9 +32,9 @@ export default function About() {
             I&apos;ve carried that into the work itself. Storefronts,
             marketing sites, and internal tools, shipped end to end, for
             clients who don&apos;t read code and don&apos;t need to. Today the
-            process is AI-native: design in Claude, refine by hand, ship in
-            Next.js. The tools changed. Making something clear and correct
-            didn&apos;t.
+            process runs through Claude and Claude Code: design in Claude,
+            refine by hand, ship in Next.js. The tools changed. Making
+            something clear and correct didn&apos;t.
           </p>
           <p className="af-about-availability" data-reveal>
             Open to full-time technical roles as well as select project work.

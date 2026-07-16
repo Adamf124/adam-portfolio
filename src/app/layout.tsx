@@ -27,7 +27,7 @@ const spaceMono = Space_Mono({
 const SITE_URL = "https://adamferguson.pro";
 const TITLE = "Adam Ferguson, Full-Stack Developer";
 const DESCRIPTION =
-  "Adam Ferguson, Atlanta-based full-stack developer. I design and build fast, considered software. I pair full-stack craft with an AI-native process.";
+  "Adam Ferguson, Atlanta-based full-stack developer. I build storefronts, marketing sites, and internal tools for people who don't read code.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

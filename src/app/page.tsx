@@ -21,7 +21,7 @@ export default function Home() {
           eyebrow="E-commerce · Next.js / Stripe · 2025"
           title={
             <>
-              Commerce, stripped to&nbsp;<em>essentials.</em>
+              Built for one job: getting growers to the right pot fast.
             </>
           }
           body="Cheap Fabric Pots, a direct-to-grower storefront designed, built, and shipped solo. Next.js App Router, Stripe checkout, and a catalog tuned for one job: getting growers to the right pot fast."
@@ -40,7 +40,7 @@ export default function Home() {
           eyebrow="Marketing Site · AI Handoff · 2026"
           title={
             <>
-              From AI mockup to <em>production.</em>
+              Designed in Claude. Shipped pixel-for-pixel in Next.js.
             </>
           }
           body="A home-services site designed in Claude, exported as a handoff bundle, then implemented pixel-for-pixel in Next.js. A working study in AI-native process: design fast, refine by hand, ship real code."
@@ -62,7 +62,8 @@ export default function Home() {
           eyebrow="Interactive · GSAP / Canvas · 2026"
           title={
             <>
-              The portfolio <em>is </em> the case&nbsp;study.
+              This page is the proof. GSAP and canvas, tuned to survive
+              mobile.
             </>
           }
           body="The page you're reading. A particle field rendered on canvas, scroll choreography in GSAP, and a restrained type system. Designed with AI, tuned by hand, open source."
