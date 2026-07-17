@@ -244,6 +244,17 @@ a:hover {
   position: relative;
   z-index: 3;
 }
+/* Gives the last panel its dwell: a sticky panel can only stay pinned while
+   its container's CONTENT box extends past it (padding doesn't count toward
+   the sticky constraint rect), and the container otherwise ends exactly at
+   the last panel's bottom, leaving zero pin travel. The panel's sticky
+   travel slides it down over this block, so it is never visible as a gap
+   before the About section. */
+.af-work::after {
+  content: "";
+  display: block;
+  height: var(--af-dwell);
+}
 /* The gap delays the next panel's arrival by the dwell distance, so a
    pinned panel holds fully in view for that much scroll before the next
    one starts sliding over it. The gap itself is never visible: the pinned
