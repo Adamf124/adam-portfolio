@@ -2,6 +2,10 @@
   --af-bg: #0c0e11;
   --af-fg: #e8e4db;
   --af-accent: #c6a15b;
+  /* Extra scroll distance a pinned section holds before the next one starts
+     covering it: the hero via extra .af-hero-wrap height, the panels via
+     the gap between them. */
+  --af-dwell: 40vh;
   color-scheme: dark;
 }
 
@@ -90,8 +94,8 @@ a:hover {
    pinned (and painting) behind the rest of the page forever. */
 .af-hero-wrap {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh + var(--af-dwell));
+  min-height: calc(100svh + var(--af-dwell));
 }
 .af-hero {
   position: sticky;
@@ -239,6 +243,13 @@ a:hover {
 .af-work {
   position: relative;
   z-index: 3;
+}
+/* The gap delays the next panel's arrival by the dwell distance, so a
+   pinned panel holds fully in view for that much scroll before the next
+   one starts sliding over it. The gap itself is never visible: the pinned
+   panel covers the viewport the whole time you scroll through it. */
+.af-panel + .af-panel {
+  margin-top: var(--af-dwell);
 }
 .af-panel {
   position: sticky;

@@ -59,16 +59,22 @@ export default function ScrollFX() {
         delay: 0.7,
       });
 
-      const hero = document.querySelector("[data-hero]");
-      if (hero) {
+      // Trigger on the wrapper, not the sticky hero itself: the pinned
+      // hero's own rect barely moves while stuck, which makes scrub
+      // progress unstable. The wrapper scrolls normally, and its extra
+      // dwell height means the fade completes exactly as the hero
+      // un-pins: the text dissolves while the hero is frozen, then the
+      // emptied hero scrolls away.
+      const heroWrap = document.querySelector(".af-hero-wrap");
+      if (heroWrap) {
         gsap.to("[data-hero-content]", {
           opacity: 0,
           y: -70,
           ease: "none",
           scrollTrigger: {
-            trigger: hero,
+            trigger: heroWrap,
             start: "top top",
-            end: "bottom 30%",
+            end: "bottom bottom",
             scrub: true,
           },
         });
