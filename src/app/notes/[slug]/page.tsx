@@ -14,9 +14,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const note = getNote(slug);
   if (!note) return { title: "Note not found | Adam Ferguson" };
+  const title = `${note.title} | Adam Ferguson`;
+  const url = `/notes/${slug}`;
   return {
-    title: `${note.title} | Adam Ferguson`,
+    title,
     description: note.summary,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description: note.summary,
+      url,
+      siteName: "Adam Ferguson",
+      type: "article",
+      locale: "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: note.summary,
+    },
   };
 }
 

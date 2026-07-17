@@ -3,10 +3,29 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import { getAllNotes } from "@/lib/notes";
 
+const TITLE = "Notes | Adam Ferguson";
+const DESCRIPTION =
+  "Short write-ups on real problems: a bug, a decision, a moment where something technical had to get explained to someone who doesn't code.";
+
 export const metadata: Metadata = {
-  title: "Notes | Adam Ferguson",
-  description:
-    "Short write-ups on real problems: a bug, a decision, a moment where something technical had to get explained to someone who doesn't code.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: "/notes",
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/notes",
+    siteName: "Adam Ferguson",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function NotesPage() {
