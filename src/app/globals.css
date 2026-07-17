@@ -162,7 +162,8 @@ a:hover {
   padding: 0 0.05em;
 }
 .af-hero-line-mask.italic {
-  padding: 0 0.08em;
+  padding: 0 0.08em 0.2em;
+  margin-bottom: -0.2em;
 }
 .af-hero-line {
   display: block;
